@@ -1,13 +1,4 @@
-// Cria o botão para excluir
-var myList = document.getElementsByTagName("LI");
-for (var i = 0; i < myList.length; i++) {
-  var span = document.createElement("SPAN"); //cria elemento span
-  var txt = document.createTextNode("\u00D7"); //sinal do x
-  span.className = "close"; //classe = close
-  span.appendChild(txt);
-  myList[i].appendChild(span);
-}
-
+//função que retira um item da lista
 function retiraItem(){
     var close = document.getElementsByClassName("close");
     for (var i = 0; i < close.length; i++) {
@@ -18,8 +9,6 @@ function retiraItem(){
     }
 }
 
-// retira item da lista
- retiraItem();
 
 // Adiciona um "feito" no item
 var list = document.querySelector('ul');
@@ -42,11 +31,11 @@ function newElement() {
   }
   document.getElementById("input").value = ""; 
 
-  var span = document.createElement("SPAN"); //cria botão retirar para somente o li criado
+  var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);    
   li.appendChild(span);
 
-  retiraItem(); // chama função para retirar item da lista
+  retiraItem();
 }
