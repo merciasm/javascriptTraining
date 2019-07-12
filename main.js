@@ -9,7 +9,6 @@ function retiraItem(){
     }
 }
 
-
 // Adiciona um "feito" no item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(event) {
@@ -29,7 +28,7 @@ function newElement() {
   } else {
     document.getElementById("myUList").appendChild(li); 
   }
-  document.getElementById("input").value = ""; 
+  document.getElementById("input").value = "";  
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -38,4 +37,5 @@ function newElement() {
   li.appendChild(span);
 
   retiraItem();
+  
 }
