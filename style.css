@@ -4,12 +4,20 @@ body {
   }
   
   h2{
-    margin:5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #ffffff; 
+    text-shadow: 3px 3px 5px #000000;
+    margin: 2% 0% 2% 0%;
   }
 
-  ul {
+  .todo__list{
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 10% 2% 10%;
   }
   
   ul li {
@@ -20,6 +28,10 @@ body {
     font-size: 20px;
     transition: 0.2s;
     font-family: 'Courier New', Courier, monospace;
+    flex: 0.8;
+    justify-content: center;
+    border-bottom: #000000 dotted thin;
+
   }
 
   ul li:hover {
@@ -33,7 +45,7 @@ body {
   }
   
   ul li.checked:before {
-    content: '';
+    content: '';  
     position: absolute;
     border-color: #ffffff;
     border-style: solid;
@@ -57,40 +69,22 @@ body {
     color: #ffffff;
   }
   
-  .header {
-    background-color: #0a8f88;
-    padding: 30px 40px;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
   input {
     border: none;
+    flex: 0.9;
     border-radius: 0;
-    width: 50%;
     padding: 10px;
-    margin-left: 18%;
-    float: left;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
   }
   
   .btn {
     padding: 10px;
-    width: 10%;
+    width: auto;
     background: #b7ebeb;
     color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
-    float: right;
     text-align: center;
-    margin-right: 18%;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
@@ -100,4 +94,12 @@ body {
   
   .btn:hover {
     background-color: rgb(106, 168, 155);
+  }
+
+  .todo__field{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+    flex-direction: row; 
+    margin: 1% 8% 2% 8%;
   }
